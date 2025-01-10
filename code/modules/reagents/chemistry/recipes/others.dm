@@ -548,7 +548,7 @@
 /datum/chemical_reaction/life
 	required_reagents = list(/datum/reagent/medicine/strange_reagent = 30, /datum/reagent/medicine/c2/synthflesh = 30, /datum/reagent/blood = 30)
 	required_temp = 374
-	//An increase of minimum reagents should halt further grief coming from the use of this chemical
+	//MONKESTATION EDIT :An increase of minimum reagents should halt further grief coming from the use of this chemical
 	//as well as any others that spawn creatures such as corgium and the life (friendly) version of this chemical
 
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
@@ -559,6 +559,7 @@
 /datum/chemical_reaction/life_friendly
 	required_reagents = list(/datum/reagent/medicine/strange_reagent = 30, /datum/reagent/medicine/c2/synthflesh = 30, /datum/reagent/consumable/sugar = 30)
 	required_temp = 374
+	//MONKESTATION EDIT : Following the same change as Life, in order to prevent grief through mob spawning
 
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
 
@@ -568,6 +569,7 @@
 /datum/chemical_reaction/corgium
 	required_reagents = list(/datum/reagent/consumable/nutriment = 30, /datum/reagent/colorful_reagent = 30, /datum/reagent/medicine/strange_reagent = 30, /datum/reagent/blood = 30)
 	required_temp = 374
+	//MONKESTATION EDIT : Following the same change as Life, in order to prevent grief through mob spawning
 
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
 
