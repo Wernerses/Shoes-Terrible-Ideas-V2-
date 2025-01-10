@@ -566,7 +566,7 @@
 	chemical_mob_spawn(holder, rand(1, round(created_volume, 1)), "Life (friendly)", FRIENDLY_SPAWN, mob_faction = FACTION_NEUTRAL)
 
 /datum/chemical_reaction/corgium
-	required_reagents = list(/datum/reagent/consumable/nutriment = 30, /datum/reagent/colorful_reagent = 30, /datum/reagent/medicine/strange_reagent = 30, /datum/reagent/blood = 1)
+	required_reagents = list(/datum/reagent/consumable/nutriment = 30, /datum/reagent/colorful_reagent = 30, /datum/reagent/medicine/strange_reagent = 30, /datum/reagent/blood = 30)
 	required_temp = 374
 
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
