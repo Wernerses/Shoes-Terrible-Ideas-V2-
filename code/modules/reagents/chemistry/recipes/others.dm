@@ -559,7 +559,7 @@
 /datum/chemical_reaction/life_friendly
 	required_reagents = list(/datum/reagent/medicine/strange_reagent = 30, /datum/reagent/medicine/c2/synthflesh = 30, /datum/reagent/consumable/sugar = 30)
 	required_temp = 374
-	//MONKESTATION EDIT : Following the same change as Life, in order to prevent grief through mob spawning
+	//MONKESTATION EDIT :Following the same change as Life, in order to prevent grief through mob spawning
 
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
 
@@ -569,7 +569,8 @@
 /datum/chemical_reaction/corgium
 	required_reagents = list(/datum/reagent/consumable/nutriment = 30, /datum/reagent/colorful_reagent = 30, /datum/reagent/medicine/strange_reagent = 30, /datum/reagent/blood = 30)
 	required_temp = 374
-	//MONKESTATION EDIT : Following the same change as Life, in order to prevent grief through mob spawning
+	//MONKESTATION EDIT :Following the same change as Life, in order to prevent grief through mob spawning,
+	//Even though it's an immensely cute swarm
 
 	reaction_tags = REACTION_TAG_EASY | REACTION_TAG_UNIQUE
 
