@@ -71,8 +71,6 @@
 	item = /obj/item/disk/plantgene/syndicate
 	cost = 17
 	restricted_roles = list(JOB_BOTANIST)
-	//MONKESTATION EDIT : Reduced TC cost, lack of buyers for the trait
-	// Let's see if people give this a chance now.
 
 /datum/uplink_item/role_restricted/power_gloves
 	name = "Power Gloves"
