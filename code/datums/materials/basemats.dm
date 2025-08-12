@@ -596,13 +596,10 @@ monkestation end */
 	color = "#ffffffec"
 	greyscale_colors = "#ffffffec"
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
-	sheet_type = /obj/item/stack/sheet/powder_cocaine
+	sheet_type = /obj/item/stack/sheet/cocaine
 	value_per_unit = 20
 	armor_modifiers = list(MELEE = 0.1, BULLET = 0.1, LASER = 0.1, ENERGY = 0.1, BOMB = -1.0, BIO = 0.1, FIRE = -1.0, ACID = 0.01)
 	beauty_modifier = -3.0
 	turf_sound_override = FOOTSTEP_SAND
 	texture_layer_icon_state = "sand"
 
-/datum/material/snow/on_accidental_mat_consumption(mob/living/carbon/victim, obj/item/source_item)
-	victim.reagents.add_reagent(/datum/reagent/drug/cocaine, rand(5, 10))
-	return TRUE
