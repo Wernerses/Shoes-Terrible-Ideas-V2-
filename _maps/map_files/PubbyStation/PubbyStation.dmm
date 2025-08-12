@@ -12426,7 +12426,7 @@
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "aWQ" = (
-/obj/structure/railing{
+/obj/structure/window/reinforced/spawner/directional/west{
 	dir = 4
 	},
 /turf/open/floor/sandy_dirt,
@@ -20643,13 +20643,16 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay)
 "bIz" = (
-/obj/structure/railing{
+/obj/machinery/door/window/right/directional/west{
+	name = "Ranch";
 	dir = 4
 	},
 /mob/living/basic/chicken/brown{
 	forced_gender = "male"
 	},
-/obj/structure/railing/corner,
+/obj/structure/window/reinforced/spawner/directional/north{
+	dir = 2
+	},
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "bIC" = (
@@ -34041,8 +34044,8 @@
 /area/station/engineering/atmos/office)
 "gWg" = (
 /obj/machinery/light/directional/west,
-/obj/structure/railing{
-	layer = 3.1
+/obj/structure/window/reinforced/spawner/directional/north{
+	dir = 2
 	},
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
@@ -52699,10 +52702,10 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "whF" = (
-/obj/structure/railing{
-	layer = 3.1
+/obj/structure/window/reinforced/spawner/directional/north{
+	dir = 2
 	},
-/obj/structure/railing/corner{
+/obj/structure/window/reinforced/spawner/directional/west{
 	dir = 4
 	},
 /turf/open/floor/sandy_dirt,
