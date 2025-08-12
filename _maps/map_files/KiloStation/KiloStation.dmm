@@ -22396,6 +22396,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "hbf" = (
@@ -27189,17 +27190,6 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tcomms)
-"irz" = (
-/obj/machinery/door/window/left/directional/south{
-	name = "Chicken Pen";
-	req_access = list("hydroponics");
-	dir = 1
-	},
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
-/turf/open/floor/sandy_dirt,
-/area/station/service/hydroponics/chicken)
 "irE" = (
 /obj/machinery/teleport/station,
 /obj/machinery/status_display/evac/directional/east,
@@ -40609,7 +40599,6 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
 "mBK" = (
-/obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/east{
 	dir = 8
 	},
@@ -70639,6 +70628,9 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
+/obj/structure/window/reinforced/spawner/directional/north{
+	dir = 2
+	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "wbG" = (
@@ -112849,7 +112841,7 @@ ehQ
 kDK
 fcR
 qDO
-irz
+doE
 bNZ
 hfR
 arl

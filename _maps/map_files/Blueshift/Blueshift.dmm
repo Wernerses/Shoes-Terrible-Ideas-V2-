@@ -28990,6 +28990,7 @@
 /area/station/security/interrogation)
 "fzU" = (
 /obj/structure/hedge,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/service/hydroponics/chicken/backroom)
 "fzY" = (
@@ -38938,9 +38939,6 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library/lounge)
 "hAp" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /obj/structure/chair/sofa/corp{
 	dir = 4;
 	layer = 2.8
@@ -54820,11 +54818,10 @@
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "kzk" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
-/turf/open/floor/grass,
-/area/station/service/hydroponics/chicken/backroom)
+/obj/structure/window/reinforced/tinted/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/iron/dark,
+/area/station/service/hydroponics/chicken)
 "kzn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -56733,9 +56730,6 @@
 /turf/open/floor/wood,
 /area/station/hallway/primary/central)
 "kUD" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /obj/structure/window/reinforced/tinted/spawner/directional/north,
 /obj/structure/nestbox,
 /turf/open/floor/grass,
@@ -72885,9 +72879,6 @@
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "oeQ" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /obj/structure/hedge,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/service/hydroponics/chicken)
@@ -86605,6 +86596,13 @@
 /obj/machinery/vending/medical,
 /turf/open/floor/iron,
 /area/station/medical/storage)
+"qLH" = (
+/mob/living/basic/chicken{
+	forced_gender = "male"
+	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/grass,
+/area/station/service/hydroponics/chicken)
 "qLQ" = (
 /obj/effect/turf_decal/bot_white/left,
 /obj/structure/closet/crate/hydroponics,
@@ -90865,9 +90863,6 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /turf/open/floor/wood/parquet,
 /area/station/service/hydroponics/chicken)
 "rCh" = (
@@ -91932,6 +91927,12 @@
 /obj/effect/spawner/random/trash/mess,
 /turf/open/floor/plating,
 /area/station/maintenance/department/science/ordnance_maint)
+"rLx" = (
+/obj/structure/nestbox,
+/obj/effect/turf_decal/siding/thinplating/dark,
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/grass,
+/area/station/service/hydroponics/chicken)
 "rLE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -100670,9 +100671,6 @@
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
-	},
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
 	},
 /turf/open/floor/wood/parquet,
 /area/station/service/hydroponics/chicken)
@@ -110512,6 +110510,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced/tinted/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "vnK" = (
@@ -112885,9 +112884,6 @@
 /area/station/maintenance/starboard/fore)
 "vIV" = (
 /obj/machinery/camera/autoname/directional/south,
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /obj/structure/hedge,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/service/hydroponics/chicken)
@@ -143988,7 +143984,7 @@ mKV
 rAx
 bbr
 kUD
-kzk
+ghs
 iTQ
 iTQ
 iTQ
@@ -147066,11 +147062,11 @@ pXP
 eJY
 edQ
 kCJ
-tyh
-eyJ
-atu
+xer
+rLx
+kzk
 vnJ
-hUh
+qLH
 upX
 fPu
 dRu
