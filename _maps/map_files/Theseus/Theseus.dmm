@@ -23348,10 +23348,8 @@
 /area/station/security/courtroom)
 "gUn" = (
 /obj/structure/nestbox,
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "gUJ" = (
@@ -28883,10 +28881,8 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos/pumproom)
 "izE" = (
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
 /obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "izL" = (
@@ -39208,9 +39204,7 @@
 "lsH" = (
 /obj/structure/flora/bush/flowers_yw/style_random,
 /obj/structure/flora/bush/flowers_br/style_random,
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "lsK" = (
@@ -45040,9 +45034,7 @@
 /turf/open/floor/iron/stairs/right,
 /area/station/service/chapel)
 "ndT" = (
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "ndX" = (
@@ -47451,7 +47443,7 @@
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/disposal/incinerator)
 "nPg" = (
-/obj/effect/spawner/structure/window,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/service/hydroponics/chicken)
 "nPn" = (
@@ -57408,10 +57400,8 @@
 /area/station/medical/storage)
 "qKP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
 /obj/machinery/egg_incubator,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "qKT" = (
