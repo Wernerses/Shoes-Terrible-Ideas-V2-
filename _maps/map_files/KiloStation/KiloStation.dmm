@@ -2971,8 +2971,8 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/port/greater)
 "aUi" = (
-/obj/structure/flora/bush/sparsegrass/style_random,
 /obj/machinery/light/directional/east,
+/obj/structure/nestbox,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics/chicken)
 "aUv" = (
@@ -39988,6 +39988,7 @@
 /turf/open/floor/iron/dark,
 /area/station/security/courtroom)
 "mqr" = (
+/obj/structure/flora/bush/sparsegrass/style_random,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics/chicken)
 "mqC" = (
@@ -40599,11 +40600,8 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal/incinerator)
 "mBK" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /obj/structure/sign/poster/contraband/kudzu/directional/east,
-/obj/structure/nestbox,
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics/chicken)
 "mBS" = (
@@ -53088,6 +53086,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "qDQ" = (
@@ -70628,9 +70627,6 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "wbG" = (
