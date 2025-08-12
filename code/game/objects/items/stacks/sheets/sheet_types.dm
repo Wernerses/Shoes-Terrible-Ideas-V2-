@@ -893,3 +893,23 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	amount = 20
 /obj/item/stack/sheet/hauntium/five
 	amount = 5
+
+/obj/item/stack/sheet/cocaine
+	name = "cocaine"
+	desc = "Reenact your favorite scenes from Scarface!"
+	singular_name = "powder cocaine pile"
+	icon_state = "cocaine"
+	inhand_icon_state = "cocaine"
+	mats_per_unit = list(/datum/material/cocaine=SHEET_MATERIAL_AMOUNT)
+	throwforce = 0
+	material_type = /datum/material/cocaine
+	merge_type = /obj/item/stack/sheet/cocaine
+	resistance_flags = FLAMMABLE
+	novariants = TRUE
+
+/obj/item/stack/sheet/cocaine/five
+	amount = 5
+/obj/item/stack/sheet/cocaine/twenty
+	amount = 20
+/obj/item/stack/sheet/cocaine/fifty
+	amount = 50
