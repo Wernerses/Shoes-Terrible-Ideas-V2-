@@ -1797,6 +1797,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north{
+	pixel_y = 1
+	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "azr" = (
@@ -43127,11 +43130,10 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/security/corrections_officer)
 "mca" = (
-/obj/machinery/door/window/right/directional/west{
-	name = "Ranch";
-	dir = 2
+/obj/structure/window/reinforced/spawner/directional/north{
+	pixel_y = 1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "mcu" = (
 /obj/effect/turf_decal/trimline/blue/filled/warning{
@@ -45096,10 +45098,11 @@
 /turf/open/floor/iron/freezer,
 /area/station/medical/chemistry)
 "mFR" = (
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
+/obj/machinery/door/window/right/directional/west{
+	name = "Ranch";
+	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "mGv" = (
 /obj/structure/cable,
@@ -80382,6 +80385,9 @@
 /area/station/security/detectives_office)
 "wkm" = (
 /obj/structure/nestbox,
+/obj/structure/window/reinforced/spawner/directional/north{
+	pixel_y = 1
+	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "wkK" = (
@@ -127981,7 +127987,7 @@ pzh
 jpR
 fop
 pdg
-mFR
+eKx
 azq
 eQw
 jpR
@@ -128238,8 +128244,8 @@ vRf
 jpR
 aWR
 eEo
-mFR
-fop
+eKx
+mca
 iAj
 jpR
 wtQ
@@ -128495,8 +128501,8 @@ pzh
 jpR
 lhZ
 kVo
-mca
-fop
+eKx
+mFR
 aWR
 jpR
 aqi
@@ -128752,7 +128758,7 @@ mLy
 jpR
 fop
 vuc
-mFR
+eKx
 wkm
 gSF
 jpR
