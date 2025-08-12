@@ -5830,15 +5830,6 @@
 /obj/machinery/requests_console/auto_name/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
-"bNi" = (
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
-/turf/open/floor/grass,
-/area/station/service/hydroponics/chicken)
 "bNn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/effect/decal/cleanable/dirt,
@@ -16364,9 +16355,6 @@
 /area/station/security/execution/transfer)
 "eSU" = (
 /obj/structure/flora/bush/grassy/style_random,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /obj/structure/nestbox,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
@@ -23921,11 +23909,11 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos/hfr_room)
 "hdr" = (
-/obj/structure/window/reinforced/spawner/directional/west,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
 	},
-/turf/open/floor/grass,
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "hdE" = (
 /obj/effect/spawner/random/trash/food_packaging,
@@ -25678,6 +25666,7 @@
 	dir = 8;
 	color = "#4d9d4e"
 	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "hDw" = (
@@ -33734,6 +33723,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "jUZ" = (
@@ -37613,9 +37603,6 @@
 "kXV" = (
 /obj/structure/flora/bush/flowers_yw/style_random,
 /obj/machinery/egg_incubator,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "kYa" = (
@@ -47127,9 +47114,6 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "nJJ" = (
 /obj/structure/flora/bush/flowers_yw/style_random,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "nJL" = (
@@ -54829,10 +54813,18 @@
 /turf/open/floor/plating,
 /area/station/cargo/sorting)
 "qay" = (
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/turf/open/floor/grass,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "qaI" = (
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -55202,7 +55194,8 @@
 /obj/structure/flora/bush/flowers_yw/style_random,
 /obj/machinery/door/window/left/directional/south{
 	name = "Chicken Pen";
-	req_access = list("hydroponics")
+	req_access = list("hydroponics");
+	pixel_y = -7
 	},
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
@@ -60911,6 +60904,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "rIK" = (
@@ -70256,11 +70250,12 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "usr" = (
+/obj/structure/flora/bush/flowers_br/style_random,
 /obj/machinery/door/window/left/directional/south{
 	name = "Chicken Pen";
-	req_access = list("hydroponics")
+	req_access = list("hydroponics");
+	pixel_y = -7
 	},
-/obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "usE" = (
@@ -129868,8 +129863,8 @@ eFe
 lVw
 aSt
 iNN
+apV
 qay
-sep
 cCG
 qlg
 cBB
@@ -130382,8 +130377,8 @@ eFe
 lVw
 gUn
 lsH
-bNi
-sep
+ndT
+qay
 cCG
 izE
 ndT
@@ -131153,8 +131148,8 @@ eTw
 lVw
 aev
 jfg
+wQr
 hdr
-iiq
 cCG
 krN
 ggC
