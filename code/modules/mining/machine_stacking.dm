@@ -26,7 +26,7 @@
 	if(!multitool_check_buffer(user, I))
 		return
 	var/obj/item/multitool/M = I
-	M.buffer = src
+	M.set_buffer(src)
 	to_chat(user, span_notice("You store linkage information in [I]'s buffer."))
 	return TRUE
 
@@ -142,7 +142,6 @@
 		if (length(matlist))
 			var/inserted = materials.mat_container.insert_item(inp)
 			materials.silo_log(src, "collected", inserted, "sheets", matlist)
-			qdel(inp)
 			return
 
 	// No silo attached process to internal storage

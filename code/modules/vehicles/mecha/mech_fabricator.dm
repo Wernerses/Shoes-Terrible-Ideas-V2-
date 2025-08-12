@@ -92,7 +92,7 @@
 	//maximum stocking amount (default 300000, 600000 at T4)
 	for(var/datum/stock_part/matter_bin/matter_bin in component_parts)
 		T += matter_bin.tier
-	rmat.set_local_size((200000 + (T * 50000)))
+	rmat.set_local_size(((100*SHEET_MATERIAL_AMOUNT) + (T * (25*SHEET_MATERIAL_AMOUNT))))
 
 	//resources adjustment coefficient (1 -> 0.85 -> 0.7 -> 0.55)
 	T = 1.15
@@ -161,6 +161,7 @@
 /obj/machinery/mecha_part_fabricator/proc/on_start_printing()
 	add_overlay("fab-active")
 	update_use_power(ACTIVE_POWER_USE)
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 /**
  * Intended to be called when the exofab has stopped working and is no longer printing items.
@@ -172,6 +173,7 @@
 	update_use_power(IDLE_POWER_USE)
 	desc = initial(desc)
 	process_queue = FALSE
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 /**
  * Calculates resource/material costs for printing an item based on the machine's resource coefficient.
@@ -283,6 +285,7 @@
 		dispense_built_part(being_built)
 		if(process_queue)
 			build_next_in_queue(FALSE)
+		SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 		return TRUE
 
 /**
@@ -337,6 +340,7 @@
 	if(!isnum(index) || !ISINTEGER(index) || !istype(queue) || (index<1 || index>length(queue)))
 		return FALSE
 	queue.Cut(index,++index)
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 	return TRUE
 
 /**
@@ -362,8 +366,8 @@
 
 /obj/machinery/mecha_part_fabricator/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/spritesheet/sheetmaterials),
-		get_asset_datum(/datum/asset/spritesheet/research_designs)
+		get_asset_datum(/datum/asset/spritesheet_batched/sheetmaterials),
+		get_asset_datum(/datum/asset/spritesheet_batched/research_designs)
 	)
 
 /obj/machinery/mecha_part_fabricator/ui_interact(mob/user, datum/tgui/ui)
@@ -376,7 +380,7 @@
 	var/list/data = list()
 	var/list/designs = list()
 
-	var/datum/asset/spritesheet/research_designs/spritesheet = get_asset_datum(/datum/asset/spritesheet/research_designs)
+	var/datum/asset/spritesheet_batched/research_designs/spritesheet = get_asset_datum(/datum/asset/spritesheet_batched/research_designs)
 	var/size32x32 = "[spritesheet.name]32x32"
 
 	for(var/datum/design/design in cached_designs)
@@ -462,6 +466,8 @@
 
 				add_to_queue(design)
 
+			SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
+
 			if(params["now"])
 				if(process_queue)
 					return
@@ -470,6 +476,8 @@
 
 				if(!being_built)
 					begin_processing()
+
+				SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 			return
 
@@ -484,6 +492,8 @@
 			// Delete everything from queue
 			queue.Cut()
 
+			SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
+
 			return
 
 		if("build_queue")
@@ -496,11 +506,15 @@
 			if(!being_built)
 				begin_processing()
 
+			SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
+
 			return
 
 		if("stop_queue")
 			// Pause queue building. Also known as stop.
 			process_queue = FALSE
+
+			SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 			return
 
@@ -513,6 +527,8 @@
 
 			// SAFETY: eject_sheets checks for valid mats
 			rmat.eject_sheets(material, amount)
+
+			SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 			return
 
 	return FALSE
@@ -521,6 +537,7 @@
 	var/datum/material/M = id_inserted
 	add_overlay("fab-load-[M.name]")
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom, cut_overlay), "fab-load-[M.name]"), 10)
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 /obj/machinery/mecha_part_fabricator/screwdriver_act(mob/living/user, obj/item/I)
 	if(..())
@@ -537,16 +554,6 @@
 		to_chat(user, span_warning("\The [src] is currently processing! Please wait until completion."))
 		return FALSE
 	return default_deconstruction_crowbar(I)
-
-/obj/machinery/mecha_part_fabricator/proc/is_insertion_ready(mob/user)
-	if(panel_open)
-		to_chat(user, span_warning("You can't load [src] while it's opened!"))
-		return FALSE
-	if(being_built)
-		to_chat(user, span_warning("\The [src] is currently processing! Please wait until completion."))
-		return FALSE
-
-	return TRUE
 
 /obj/machinery/mecha_part_fabricator/maint
 	link_on_init = FALSE

@@ -46,6 +46,7 @@
 #define MECHA_SNOWFLAKE_ID_MODE "mode_snowflake"
 #define MECHA_SNOWFLAKE_ID_EXTINGUISHER "extinguisher_snowflake"
 #define MECHA_SNOWFLAKE_ID_EJECTOR "ejector_snowflake"
+#define MECHA_SNOWFLAKE_ID_OREBOX_MANAGER "orebox_manager_snowflake"
 
 #define MECHA_AMMO_INCENDIARY "Incendiary bullet"
 #define MECHA_AMMO_BUCKSHOT "Buckshot shell"
@@ -54,3 +55,10 @@
 #define MECHA_AMMO_MISSILE_PEP "PEP missile"
 #define MECHA_AMMO_FLASHBANG "Flashbang"
 #define MECHA_AMMO_CLUSTERBANG "Clusterbang"
+//monke edit start
+#define MECHA_AMMO_PIPEGUN "Improvised shell"
+#define MECHA_AMMO_PEASHOOTER "Peashooter bullet"
+#define MECHA_AMMO_ISG "IED grenades"
+#define MECHA_AMMO_LIGHTTANK "40mm shell"
+#define MECHA_AMMO_LIGHTTANKMG "12.7x70mm malone"
+//monke edit end

@@ -193,6 +193,16 @@
 	desc = "A neckpiece for a maid costume, it smells faintly of disappointment."
 	icon_state = "maid_neck"
 
+/obj/item/clothing/neck/kris
+	name = "vessel's ascot"
+	desc = "* A replica of the ascot a vessel wore while saving the world."
+	icon_state = "kris_ascot"
+
+/obj/item/clothing/neck/ralsei
+	name = "prince's scarf"
+	desc = "A fluffy scarf, it smells of cake."
+	icon_state = "ralsei_scarf"
+
 /obj/item/clothing/neck/stethoscope
 	name = "stethoscope"
 	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
@@ -495,3 +505,9 @@
 /obj/item/clothing/neck/beads/Initialize(mapload)
 	. = ..()
 	color = color = pick("#ff0077","#d400ff","#2600ff","#00ccff","#00ff2a","#e5ff00","#ffae00","#ff0000", "#ffffff")
+
+/obj/item/clothing/neck/shawl
+	name = "silk shawl"
+	desc = "A delicate silk scarf with tiny sparkling fragments woven into the fabric."
+	icon_state = "starshawl"
+	icon = 'icons/obj/clothing/neck.dmi'

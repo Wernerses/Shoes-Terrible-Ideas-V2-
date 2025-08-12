@@ -57,7 +57,7 @@ SUBSYSTEM_DEF(garbage)
 	#endif
 
 	// monkestation start: disabling hard deletes
-#ifndef UNIT_TESTS
+#if !defined(UNIT_TESTS) && !defined(REFERENCE_TRACKING)
 	/// Toggle for enabling/disabling hard deletes. Objects that don't explicitly request hard deletion with this disabled will leak.
 	var/enable_hard_deletes = FALSE
 #endif
@@ -227,13 +227,13 @@ SUBSYSTEM_DEF(garbage)
 				var/type = D.type
 				var/datum/qdel_item/I = items[type]
 
+				var/detail = D.dump_harddel_info()
 				var/message = "## TESTING: GC: -- [text_ref(D)] | [type] was unable to be GC'd --"
 				message = "[message] (ref count of [refcount(D)])"
-				log_world(message)
-
-				var/detail = D.dump_harddel_info()
 				if(detail)
+					message = "[message] | [detail]"
 					LAZYADD(I.extra_details, detail)
+				log_world(message)
 
 				#ifdef TESTING
 				for(var/c in GLOB.admins) //Using testing() here would fill the logs with ADMIN_VV garbage
@@ -291,7 +291,7 @@ SUBSYSTEM_DEF(garbage)
 	// monkestation start: disable hard deletes
 	if(!D)
 		return
-#ifndef UNIT_TESTS
+#if !defined(UNIT_TESTS) && !defined(REFERENCE_TRACKING)
 	if(!enable_hard_deletes && !override)
 		failed_hard_deletes |= D
 		return
@@ -358,15 +358,36 @@ SUBSYSTEM_DEF(garbage)
 /datum/qdel_item/New(mytype)
 	name = "[mytype]"
 
+/proc/non_datum_qdel(to_delete)
+	var/found_type = "unable to determine type"
+	var/delable = FALSE
+
+	if(islist(to_delete))
+		found_type = "list"
+		delable = TRUE
+
+	if(isnum(to_delete))
+		found_type = "number"
+
+	if(ispath(to_delete))
+		found_type = "typepath"
+
+	if(delable)
+		del(to_delete)
+
+	CRASH("Bad qdel ([found_type])")
+
 /// Should be treated as a replacement for the 'del' keyword.
 ///
 /// Datums passed to this will be given a chance to clean up references to allow the GC to collect them.
 /proc/qdel(datum/to_delete, force = FALSE)
 	if(!istype(to_delete))
+		if(isnull(to_delete))
+			return
 #ifndef DISABLE_DREAMLUAU
 		DREAMLUAU_CLEAR_REF_USERDATA(to_delete)
 #endif
-		del(to_delete)
+		non_datum_qdel(to_delete)
 		return
 
 	var/datum/qdel_item/trash = SSgarbage.items[to_delete.type]
@@ -401,7 +422,9 @@ SUBSYSTEM_DEF(garbage)
 			SSgarbage.Queue(to_delete)
 		if (QDEL_HINT_IWILLGC)
 			to_delete.gc_destroyed = world.time
+#ifndef DISABLE_DEMOS
 			SSdemo.mark_destroyed(to_delete) // monkestation edit: replays
+#endif
 			return
 		if (QDEL_HINT_LETMELIVE) //qdel should let the object live after calling destory.
 			if(!force)
@@ -421,10 +444,14 @@ SUBSYSTEM_DEF(garbage)
 
 			SSgarbage.Queue(to_delete)
 		if (QDEL_HINT_HARDDEL) //qdel should assume this object won't gc, and queue a hard delete
+#ifndef DISABLE_DEMOS
 			SSdemo.mark_destroyed(to_delete) // monkestation edit: replays
+#endif
 			SSgarbage.Queue(to_delete, GC_QUEUE_HARDDELETE)
 		if (QDEL_HINT_HARDDEL_NOW) //qdel should assume this object won't gc, and hard del it post haste.
+#ifndef DISABLE_DEMOS
 			SSdemo.mark_destroyed(to_delete) // monkestation edit: replays
+#endif
 			SSgarbage.HardDelete(to_delete, override = TRUE)
 		#ifdef REFERENCE_TRACKING
 		if (QDEL_HINT_FINDREFERENCE) //qdel will, if REFERENCE_TRACKING is enabled, display all references to this object, then queue the object for deletion.
@@ -441,7 +468,9 @@ SUBSYSTEM_DEF(garbage)
 			#endif
 			trash.no_hint++
 			SSgarbage.Queue(to_delete)
+#ifndef DISABLE_DEMOS
 	// monkestation start: replays
 	if(to_delete)
 		SSdemo?.mark_destroyed(to_delete)
 	// monkestation end: replays
+#endif

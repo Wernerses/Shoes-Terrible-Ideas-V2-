@@ -31,6 +31,12 @@
 	/// Does this charge the user's ID on fabrication?
 	var/charges_tax = TRUE
 
+	/// Made so we dont call addtimer() 40,000 times in on_techweb_update(). only allows addtimer() to be called on the first update.
+	var/techweb_updating = FALSE
+
+	/// Whether or not the fabricator links to the ore silo on init. Special derelict or maintanance variants should set this to FALSE.
+	var/link_on_init = TRUE
+
 /obj/machinery/rnd/production/Initialize(mapload)
 	. = ..()
 
@@ -38,7 +44,7 @@
 	materials = AddComponent(
 		/datum/component/remote_materials, \
 		"lathe", \
-		mapload, \
+		mapload && link_on_init, \
 		mat_container_flags = BREAKDOWN_FLAGS_LATHE, \
 	)
 	AddComponent(
@@ -75,12 +81,14 @@
 /obj/machinery/rnd/production/proc/on_techweb_update()
 	SIGNAL_HANDLER
 
-	// We're probably going to get more than one update (design) at a time, so batch
-	// them together.
-	addtimer(CALLBACK(src, PROC_REF(update_designs)), 2 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE)
+	if(!techweb_updating) //so we batch these updates together
+		techweb_updating = TRUE
+		addtimer(CALLBACK(src, PROC_REF(update_designs)), 2 SECONDS)
 
 /// Updates the list of designs this fabricator can print.
 /obj/machinery/rnd/production/proc/update_designs()
+	PROTECTED_PROC(TRUE)
+	techweb_updating = FALSE
 	var/previous_design_count = cached_designs.len
 
 	cached_designs.Cut()
@@ -107,8 +115,8 @@
 
 /obj/machinery/rnd/production/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/spritesheet/sheetmaterials),
-		get_asset_datum(/datum/asset/spritesheet/research_designs)
+		get_asset_datum(/datum/asset/spritesheet_batched/sheetmaterials),
+		get_asset_datum(/datum/asset/spritesheet_batched/research_designs)
 	)
 
 /obj/machinery/rnd/production/ui_interact(mob/user, datum/tgui/ui)
@@ -121,10 +129,15 @@
 		ui.open()
 
 /obj/machinery/rnd/production/ui_static_data(mob/user)
-	var/list/data = list()
+	var/list/data
+	if(isnull(materials.mat_container))
+		data = list()
+	else
+		data = materials.mat_container.ui_static_data()
+
 	var/list/designs = list()
 
-	var/datum/asset/spritesheet/research_designs/spritesheet = get_asset_datum(/datum/asset/spritesheet/research_designs)
+	var/datum/asset/spritesheet_batched/research_designs/spritesheet = get_asset_datum(/datum/asset/spritesheet_batched/research_designs)
 	var/size32x32 = "[spritesheet.name]32x32"
 
 	var/max_multiplier
@@ -201,7 +214,7 @@
 		var/total_storage = 0
 
 		for(var/datum/stock_part/matter_bin/bin in component_parts)
-			total_storage += bin.tier * 75000
+			total_storage += bin.tier * (37.5*SHEET_MATERIAL_AMOUNT)
 
 		materials.set_local_size(total_storage)
 
@@ -325,6 +338,7 @@
 		reagents.remove_reagent(reagent, design.reagents_list[reagent] * print_quantity * coefficient)
 
 	busy = TRUE
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 	if(production_animation)
 		flick(production_animation, src)
@@ -337,6 +351,7 @@
 	return TRUE
 
 /obj/machinery/rnd/production/proc/finalize_build()
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 /obj/machinery/rnd/production/proc/eject_sheets(eject_sheet, eject_amt)
 	var/datum/component/material_container/mat_container = materials.mat_container
@@ -350,6 +365,7 @@
 		return 0
 
 	var/count = mat_container.retrieve_sheets(text2num(eject_amt), eject_sheet, drop_location())
+	SStgui.update_uis(src) // monkestation edit: try to ensure UI always updates
 
 	var/list/matlist = list()
 	matlist[eject_sheet] = SHEET_MATERIAL_AMOUNT * count
