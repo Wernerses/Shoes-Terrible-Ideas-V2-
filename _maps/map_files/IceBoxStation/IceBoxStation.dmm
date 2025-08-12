@@ -7910,9 +7910,7 @@
 /turf/open/lava/plasma/ice_moon,
 /area/icemoon/underground/explored)
 "cpD" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/machinery/door/window/left/directional/south{
 	name = "Chicken Pen";
 	req_access = list("hydroponics");
@@ -11230,9 +11228,7 @@
 /turf/open/floor/plating,
 /area/station/security/lockers)
 "dol" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics/chicken)
@@ -12749,9 +12745,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "dMR" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/floor/grass,
@@ -13461,9 +13455,7 @@
 /turf/open/floor/iron/dark,
 /area/station/maintenance/disposal)
 "dZB" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /mob/living/basic/chicken/brown{
 	forced_gender = "male"
 	},
@@ -21358,6 +21350,7 @@
 	pixel_y = 3;
 	pixel_x = -27
 	},
+/obj/machinery/smartfridge/disks,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "gAR" = (
@@ -48909,6 +48902,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/warning{
 	dir = 6
 	},
+/obj/machinery/egg_incubator,
 /turf/open/floor/iron/dark,
 /area/station/service/hydroponics/chicken)
 "oVw" = (
@@ -53449,6 +53443,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/warning{
 	dir = 10
 	},
+/obj/machinery/egg_incubator,
 /turf/open/floor/iron/dark,
 /area/station/service/hydroponics/chicken)
 "qqJ" = (
@@ -60696,7 +60691,6 @@
 /turf/open/floor/carpet,
 /area/station/service/library)
 "sEp" = (
-/obj/machinery/egg_incubator,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "sEq" = (
@@ -74495,7 +74489,6 @@
 /turf/open/floor/engine,
 /area/station/engineering/atmos/hfr_room)
 "wUY" = (
-/obj/machinery/egg_incubator,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
@@ -77146,9 +77139,7 @@
 /turf/closed/wall,
 /area/station/command/meeting_room)
 "xKQ" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/flowers_br/style_random,
@@ -77367,9 +77358,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "xOI" = (
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
+/obj/structure/window/reinforced/spawner/directional/west,
 /mob/living/basic/chicken,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics/chicken)

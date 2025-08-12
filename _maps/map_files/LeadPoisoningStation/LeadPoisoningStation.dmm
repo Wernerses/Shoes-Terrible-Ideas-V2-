@@ -230,9 +230,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "afq" = (
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /mob/living/basic/chicken,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
@@ -10610,11 +10608,9 @@
 /area/station/security/brig/entrance)
 "fgY" = (
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /obj/effect/decal/cleanable/dirt,
 /mob/living/basic/chicken,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "fha" = (
@@ -15330,6 +15326,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/egg_incubator,
 /turf/open/floor/stone,
 /area/station/service/hydroponics)
 "hwh" = (
@@ -29215,10 +29212,8 @@
 /turf/open/floor/iron/freezer,
 /area/station/security/prison/shower)
 "nVi" = (
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /obj/structure/nestbox,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "nVp" = (
@@ -33766,9 +33761,7 @@
 /area/station/security/prison/mess)
 "qkS" = (
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/nestbox,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
@@ -33912,10 +33905,8 @@
 /area/station/security/execution/transfer)
 "qoV" = (
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
 /obj/structure/nestbox,
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "qoW" = (

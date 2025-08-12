@@ -44268,10 +44268,8 @@
 /area/station/service/hydroponics)
 "kmy" = (
 /obj/structure/window/reinforced/spawner/directional/south,
-/obj/structure/window/reinforced/spawner/directional/east{
-	dir = 8
-	},
 /obj/structure/nestbox,
+/obj/structure/window/reinforced/spawner/directional/west,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics/chicken)
 "kmE" = (
@@ -131211,7 +131209,7 @@ isH
 nVF
 doY
 doY
-wFr
+wRJ
 doY
 doY
 maW

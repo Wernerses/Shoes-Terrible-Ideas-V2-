@@ -12422,13 +12422,14 @@
 /obj/machinery/status_display/ai{
 	pixel_y = 32
 	},
-/obj/structure/nestbox,
+/mob/living/basic/chicken/brown{
+	forced_gender = "male"
+	},
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "aWQ" = (
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/obj/structure/nestbox,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "aWR" = (
@@ -20647,12 +20648,7 @@
 	name = "Ranch";
 	dir = 4
 	},
-/mob/living/basic/chicken/brown{
-	forced_gender = "male"
-	},
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "bIC" = (
@@ -34044,9 +34040,7 @@
 /area/station/engineering/atmos/office)
 "gWg" = (
 /obj/machinery/light/directional/west,
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "gWo" = (
@@ -40556,6 +40550,10 @@
 	},
 /turf/open/floor/iron,
 /area/station/construction/mining/aux_base)
+"mGk" = (
+/obj/machinery/egg_incubator,
+/turf/open/floor/iron,
+/area/station/service/hydroponics)
 "mGP" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -52702,12 +52700,8 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
 "whF" = (
-/obj/structure/window/reinforced/spawner/directional/north{
-	dir = 2
-	},
-/obj/structure/window/reinforced/spawner/directional/west{
-	dir = 4
-	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/window/reinforced/spawner/directional/east,
 /turf/open/floor/sandy_dirt,
 /area/station/service/hydroponics)
 "whH" = (
@@ -81403,7 +81397,7 @@ aKT
 aNm
 mUt
 aKT
-aZW
+mGk
 aTQ
 aZW
 aRL

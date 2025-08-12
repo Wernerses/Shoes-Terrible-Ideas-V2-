@@ -27883,9 +27883,6 @@
 /turf/open/floor/iron/white/textured,
 /area/station/medical/aslyum)
 "foV" = (
-/obj/structure/window/reinforced/tinted/spawner/directional/north{
-	dir = 2
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment{
@@ -27896,6 +27893,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
+/obj/structure/window/reinforced/tinted/spawner/directional/south,
 /turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "foY" = (
@@ -38939,10 +38937,6 @@
 /turf/open/floor/iron/dark,
 /area/station/service/library/lounge)
 "hAp" = (
-/obj/structure/chair/sofa/corp{
-	dir = 4;
-	layer = 2.8
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
@@ -54817,11 +54811,6 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
-"kzk" = (
-/obj/structure/window/reinforced/tinted/spawner/directional/north,
-/obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/floor/iron/dark,
-/area/station/service/hydroponics/chicken)
 "kzn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -55175,20 +55164,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining,
 /turf/open/floor/iron/dark,
 /area/station/cargo/lobby)
-"kCJ" = (
-/obj/structure/window/reinforced/tinted/spawner/directional/north{
-	dir = 2
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/machinery/duct,
-/obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood/large,
-/area/station/service/hydroponics/chicken)
 "kCV" = (
 /obj/effect/spawner/random/entertainment/arcade{
 	dir = 4
@@ -90856,12 +90831,12 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
 "rCe" = (
-/obj/structure/chair/sofa/corp/right{
-	dir = 4;
-	layer = 2.8
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
+	},
+/obj/structure/chair/comfy{
+	color = "#596479";
+	dir = 4
 	},
 /turf/open/floor/wood/parquet,
 /area/station/service/hydroponics/chicken)
@@ -100665,12 +100640,12 @@
 /turf/open/floor/grass,
 /area/station/hallway/primary/central)
 "twI" = (
-/obj/structure/chair/sofa/corp/left{
-	dir = 4;
-	layer = 2.8
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
+	},
+/obj/structure/chair/comfy{
+	color = "#596479";
+	dir = 4
 	},
 /turf/open/floor/wood/parquet,
 /area/station/service/hydroponics/chicken)
@@ -102957,9 +102932,7 @@
 /obj/structure/cable,
 /obj/machinery/duct,
 /obj/effect/turf_decal/siding/wood,
-/obj/structure/window/reinforced/tinted/spawner/directional/north{
-	dir = 2
-	},
+/obj/structure/window/reinforced/tinted/spawner/directional/south,
 /turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "tQZ" = (
@@ -111125,9 +111098,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
 "vtN" = (
-/obj/structure/window/reinforced/tinted/spawner/directional/north{
-	dir = 2
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/junction/flip{
@@ -111136,6 +111106,7 @@
 /obj/structure/cable,
 /obj/machinery/duct,
 /obj/effect/turf_decal/siding/wood,
+/obj/structure/window/reinforced/tinted/spawner/directional/south,
 /turf/open/floor/wood/large,
 /area/station/service/hydroponics/chicken)
 "vtS" = (
@@ -146290,7 +146261,7 @@ ruY
 jjm
 sbw
 kXd
-kCJ
+tQX
 xer
 wVq
 atu
@@ -146547,7 +146518,7 @@ jWg
 kiR
 fZs
 kXd
-kCJ
+tQX
 hUh
 lZw
 atu
@@ -147061,10 +147032,10 @@ dku
 pXP
 eJY
 edQ
-kCJ
+tQX
 xer
 rLx
-kzk
+atu
 vnJ
 qLH
 upX
