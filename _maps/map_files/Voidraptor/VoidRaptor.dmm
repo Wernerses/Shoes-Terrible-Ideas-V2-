@@ -15984,6 +15984,11 @@
 	dir = 1
 	},
 /area/station/ai_monitored/security/armory)
+"eEo" = (
+/obj/structure/nestbox,
+/obj/structure/window/reinforced/spawner/directional/south,
+/turf/open/floor/grass,
+/area/station/service/hydroponics/chicken)
 "eEp" = (
 /obj/machinery/recharger{
 	pixel_y = 4
@@ -43126,10 +43131,6 @@
 	name = "Ranch";
 	dir = 2
 	},
-/obj/machinery/door/window/right/directional/west{
-	name = "Ranch";
-	dir = 1
-	},
 /turf/open/floor/wood,
 /area/station/service/hydroponics/chicken)
 "mcu" = (
@@ -45098,7 +45099,6 @@
 /obj/structure/window/reinforced/spawner/directional/north{
 	dir = 2
 	},
-/obj/structure/window/reinforced/spawner/directional/north,
 /turf/open/floor/wood,
 /area/station/service/hydroponics/chicken)
 "mGv" = (
@@ -54075,6 +54075,7 @@
 /mob/living/basic/chicken{
 	forced_gender = "female"
 	},
+/obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/grass,
 /area/station/service/hydroponics/chicken)
 "pdh" = (
@@ -77476,6 +77477,10 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/station/medical/treatment_center)
+"vuc" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/turf/open/floor/grass,
+/area/station/service/hydroponics/chicken)
 "vud" = (
 /turf/open/floor/iron/textured,
 /area/station/maintenance/aft)
@@ -128232,7 +128237,7 @@ nuL
 vRf
 jpR
 aWR
-wkm
+eEo
 mFR
 fop
 iAj
@@ -128489,7 +128494,7 @@ hGr
 pzh
 jpR
 lhZ
-fop
+kVo
 mca
 fop
 aWR
@@ -128746,7 +128751,7 @@ pzh
 mLy
 jpR
 fop
-fop
+vuc
 mFR
 wkm
 gSF
