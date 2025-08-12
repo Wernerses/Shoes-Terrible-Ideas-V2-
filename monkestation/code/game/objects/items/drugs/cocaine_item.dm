@@ -46,7 +46,7 @@
 		return
 	to_chat(user, span_notice("You finish breaking up [src]."))
 	for(var/i in 1 to 5)
-		new /obj/item/reagent_containers/cocaine(user.loc)
+		new /obj/item/stack/sheet/cocaine(user.loc)
 	qdel(src)
 
 /datum/crafting_recipe/cocainebrick
@@ -73,7 +73,7 @@
 /datum/export/cocaine
 	cost = CARGO_CRATE_VALUE * 0.4
 	unit_name = "cocaine"
-	export_types = list(/obj/item/reagent_containers/cocaine)
+	export_types = list(/obj/item/stack/sheet/cocaine)
 	include_subtypes = FALSE
 
 /datum/export/cocainebrick
