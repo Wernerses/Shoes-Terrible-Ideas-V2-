@@ -912,7 +912,8 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 /obj/item/stack/sheet/cocaine/Initialize(mapload)
 	. = ..()
 	for(var/reagent in grind_results)
-		var/amount += grind_results[reagent]
+		var/amount = 0
+		amount += grind_results[reagent]
 	create_reagents(amount)
 	reagents.add_reagent_list(grind_results)
 
