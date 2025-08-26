@@ -935,7 +935,7 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 		return
 
 	to_chat(user, span_notice("You finish snorting [src]."))
-	if(reagents.total_volume)
+	if(grind_results)
 		user.reagents.add_reagent_list(grind_results)
 	use(1)
 
