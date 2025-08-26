@@ -901,7 +901,6 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	singular_name = "powder cocaine pile"
 	icon = 'monkestation/icons/obj/items/drugs.dmi'
 	icon_state = "cocaine"
-	inhand_icon_state = "cocaine"
 	mats_per_unit = list(/datum/material/cocaine = SHEET_MATERIAL_AMOUNT)
 	material_type = /datum/material/cocaine
 	throwforce = 0
