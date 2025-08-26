@@ -929,7 +929,7 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	to_chat(user, span_notice("You finish snorting [src]."))
 	if(reagents.total_volume)
 		reagents.trans_to(user, reagents.total_volume, transfered_by = user, methods = INGEST)
-	qdel(src)
+	use(1)
 
 /obj/item/stack/sheet/cocaine/attack(mob/target, mob/user)
 	if(target == user)
