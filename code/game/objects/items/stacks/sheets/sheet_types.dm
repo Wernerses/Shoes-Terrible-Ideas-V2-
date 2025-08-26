@@ -908,7 +908,12 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	resistance_flags = FLAMMABLE
 	novariants = TRUE
 	grind_results = list(/datum/reagent/drug/cocaine = 10)
-
+/obj/item/stack/sheet/cocaine/Initialize(mapload)
+	. = ..()
+	for(var/reagent in grind_results)
+		var/amount += grind_results[reagent]
+	create_reagents(amount)
+	reagents.add_reagent_list(grind_results)
 /obj/item/stack/sheet/cocaine/proc/snort(mob/living/user)
 	if(!iscarbon(user))
 		return
