@@ -599,7 +599,7 @@ monkestation end */
 	sheet_type = /obj/item/stack/sheet/cocaine
 	value_per_unit = 20 / SHEET_MATERIAL_AMOUNT
 	armor_modifiers = list(MELEE = 0.1, BULLET = 0.1, LASER = 0.1, ENERGY = 0.1, BOMB = -1.0, BIO = 0.1, FIRE = -1.0, ACID = 0.01)
-	beauty_modifier = -3.0 / SHEET_MATERIAL_AMOUNT
+	beauty_modifier = -300 / SHEET_MATERIAL_AMOUNT
 	turf_sound_override = FOOTSTEP_SAND
 	texture_layer_icon_state = "sand"
 
