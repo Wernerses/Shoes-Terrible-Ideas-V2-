@@ -340,6 +340,7 @@
   - bugfix: (LT3) Tramstation's exterior light fixtures no longer get destroyed as
       soon as the tram moves.
   - code_imp: (LT3) Tram landmarks are now all subtyped instead of map varedits.
+  - bugfix: Voltaic Combat Cyberhearts now actually accept flux anomaly cores.
   EnterTheJake:
   - rscadd: A new Anomaly organ has been introduced, The Voltaic Combat Cyberheart!
   EssentialTomato:
@@ -388,6 +389,8 @@
   - bugfix: fixed centrifuge only holding 1 tube
   - rscadd: CMO starts with an advanced serverlink in his locker
   - bugfix: fixed delta and blueshift maps giving the blueshield duplicate items
+  lemoninthedark, ben10omintrix:
+  - refactor: refactors how AI behaviors handle their failures and successes
   notghosti:
   - rscadd: Bingle pit spawns now are temporary ghost roles, meaning after you bingled
       youll return to your body on death.
@@ -406,6 +409,8 @@
   - bugfix: Alien pistols will deal damage properly again
   - bugfix: The 'odd announcement' device, found in opfors, now properly announce
       instead of runtiming.
+  - bugfix: Mecha designs for fire extinguisher, plasma generator, and light amplification
+      now properly only show once on their corresponding mechs.
   throwawayuseless:
   - spellcheck: Enrolls the local clock cult in a Ratvarian 201 class, so that they
       might maybe stop pronouncing Ratvar incorrectly. It's not that hard, guys. Unrelatedly,
@@ -417,3 +422,67 @@
   - bugfix: If you kick someone in the crotch it now properly plays a glass shattering
       noise.
   - rscadd: Neutered Borrers, token and traitor, can use Willing Host.
+  - rscadd: Adds a Comically Large Straw. Use it to drink entire containers in one
+      gulp, or to speed up blood and/or DNA zuccing if you happen to be a monster
+      of one of those persuasions.
+  - bugfix: Bloodsucker blood drinking moodlet now actually triggers if you aggressively
+      drink blood.
+2025-09-12:
+  Absolucy:
+  - bugfix: Fixed spawning bingles not working.
+  Absolucy, Bisar:
+  - code_imp: Heat capacity calculation for gas mixtures has been slightly optimized.
+  Uristthedorf:
+  - bugfix: Fixes oozelings having their burn modifier applied twice.
+  Xander3359:
+  - rscadd: Blueshield and brig physician have had their ID access updated.
+2025-09-13:
+  Absolucy:
+  - bugfix: (GoldenAlpharex) Makes checks for the station z level more robust against
+      coders doing less intuitive stuff, thus protecting it from breaking in weirdly
+      difficult and seemingly unrelated places (I'm looking at you, nuke cinematic
+      unit test).
+  - code_imp: (timothymtorres) Add multi-z helper function.
+  Addust:
+  - bugfix: is your telecomms relay running? (the one on centcom isn't anymore)
+  EssentialTomato:
+  - bugfix: Fixed being unable to scoop up ice cream from the vat.
+  - bugfix: Fixed plushies and the nuclear authentication disk not wanting to be tucked
+      in bed. (It's bedtime, go to sleep.)
+  - bugfix: Fixed plushies being silent when hitting someone with them.
+  - bugfix: Fixed being unable to roast sausages on the singularity.
+  Ice-Type:
+  - code_imp: Adds a fauna_mod variable, that can be used to add a damage multiplier
+      against lavaland fauna to any projectile.
+  JohnFulpWillard:
+  - qol: Roundend ckey censoring is now one pref instead of two, and it censors AI/borg
+      player ckeys.
+  Lawlolawl:
+  - bugfix: 'Fixed toolset cybernetic implant multitool retraction issue when using
+      APC scanner feature. Hint: use in hand for APC scanning, right-click on the
+      item in hand to retract! (Or use the UI button.)'
+  Some Guy Who's Extremely Inanely Unfathomably Mad At People Misspelling Ratvar:
+  - spellcheck: Rends the final misspelled Ratvar from the face of the cosmos, cementing
+      the spelling of He on Reebe's name forever more as R A T V A R. NO APOSTROPHE.
+  - spellcheck: also the ratvarians are once again better at poetry
+  ThePooba:
+  - rscadd: adds beetmin, lil beet mobs that skidaddle and spawn from vent clogs
+  - bugfix: fixes rack and reinforced table unwrenching
+  - balance: mining guardian limited to one
+  - balance: reduces laser damage for base lasers and hellfire to 22 from 25
+  - bugfix: fixes asteroid tiles showing funny turfs
+  - bugfix: personal lockers can be opened
+  - bugfix: bots can be accessed
+  - balance: shipbreaker gives ~50% more cash to player
+  Xander3359:
+  - code_imp: (necromanceranne) The paper mache robe now works a bit better under
+      the hood.
+  - balance: (Improvedname) Weakens summoned stickmen to be 1 or 2 hit
+  - bugfix: voltaic heart uses interaction for anomaly installation
+  notghosti:
+  - qol: ' Surgical processor is stored in belts also now'
+  throwawayuseless:
+  - balance: Acarp DD combo now does oxy damage instead of brute, to preserve it's
+      nonlethal nature from Scarp.
+  - balance: Acarp can now snap necks while strangling, not just while neckgrabbing.
+  - rscadd: You can lathe mining light beacons now.
