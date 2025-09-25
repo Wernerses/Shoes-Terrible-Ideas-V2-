@@ -954,5 +954,3 @@ new /datum/stack_recipe("paper frame door", /obj/structure/mineral_door/paperfra
 	amount = 20
 /obj/item/stack/sheet/cocaine/fifty
 	amount = 50
-/obj/item/stack/sheet/cocaine/fifty
-	amount = 100
